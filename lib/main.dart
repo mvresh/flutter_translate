@@ -154,127 +154,139 @@ class _TranslatePageState extends State<TranslatePage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.fromLTRB(8.0, 0, 0, 0),
-                child: Row(
-                  children: <Widget>[
-                    Expanded(
-                      flex: 2,
-                      child: Material(
-                        child: DropdownButton<String>(
-                          value: dropDownValue1,
-                          iconSize: 24,
-                          style: TextStyle(color: Colors.blue, fontSize: 20),
-                          onChanged: (String newValue) {
-                            setState(() {
-                              dropDownValue1 = newValue;
-                            });
-                          },
-                          items: <String>[
-                            'Indonesian',
-                            'Telugu',
-                            'Portuguese',
-                            'English'
-                          ].map<DropdownMenuItem<String>>((String value) {
-                            return DropdownMenuItem<String>(
-                              value: value,
-                              child: Text(value),
-                            );
-                          }).toList(),
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                        flex: 1,
-                        child: Icon(
-                          Icons.compare_arrows,
-                          size: 30,
-                          color: Colors.blue,
-                        )),
-                    Expanded(
-                      flex: 2,
-                      child: Material(
-                        child: DropdownButton<String>(
-                          value: dropDownValue2,
-                          iconSize: 24,
-                          style: TextStyle(color: Colors.blue, fontSize: 20),
-                          onChanged: (String newValue) {
-                            setState(() {
-                              dropDownValue2 = newValue;
-                            });
-                          },
-                          items: <String>[
-                            'Indonesian',
-                            'Telugu',
-                            'Portuguese',
-                            'English'
-                          ].map<DropdownMenuItem<String>>((String value) {
-                            return DropdownMenuItem<String>(
-                              value: value,
-                              child: Text(value),
-                            );
-                          }).toList(),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              SizedBox(height: 5,),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(0, 0, 4, 8),
+              Container(
+                color: Colors.white,
                 child: Column(
                   children: <Widget>[
                     Padding(
-                      padding: const EdgeInsets.fromLTRB(0, 4, 0, 0),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: <Widget>[
-                          Row(
-                            children: <Widget>[
-                              Icon(
-                                Icons.volume_up,
-                                color: Colors.black,
+                      padding: const EdgeInsets.fromLTRB(8.0, 0, 0, 0),
+                      child: Container(
+                        child: Row(
+                          children: <Widget>[
+                            Expanded(
+                              flex: 2,
+                              child: Material(
+                                color: Colors.white,
+                                child: DropdownButton<String>(
+                                  value: dropDownValue1,
+                                  iconSize: 24,
+                                  style: TextStyle(color: Colors.blue, fontSize: 20),
+                                  onChanged: (String newValue) {
+                                    setState(() {
+                                      dropDownValue1 = newValue;
+                                    });
+                                  },
+                                  items: <String>[
+                                    'Indonesian',
+                                    'Telugu',
+                                    'Portuguese',
+                                    'English'
+                                  ].map<DropdownMenuItem<String>>((String value) {
+                                    return DropdownMenuItem<String>(
+                                      value: value,
+                                      child: Text(value),
+                                    );
+                                  }).toList(),
+                                ),
                               ),
-                              SizedBox(
-                                width: 10,
+                            ),
+                            Expanded(
+                                flex: 1,
+                                child: Icon(
+                                  Icons.compare_arrows,
+                                  size: 30,
+                                  color: Colors.blue,
+                                )),
+                            Expanded(
+                              flex: 2,
+                              child: Material(
+                                color: Colors.white,
+                                child: DropdownButton<String>(
+                                  value: dropDownValue2,
+                                  iconSize: 24,
+                                  style: TextStyle(color: Colors.blue, fontSize: 20),
+                                  onChanged: (String newValue) {
+                                    setState(() {
+                                      dropDownValue2 = newValue;
+                                    });
+                                  },
+                                  items: <String>[
+                                    'Indonesian',
+                                    'Telugu',
+                                    'Portuguese',
+                                    'English'
+                                  ].map<DropdownMenuItem<String>>((String value) {
+                                    return DropdownMenuItem<String>(
+                                      value: value,
+                                      child: Text(value),
+                                    );
+                                  }).toList(),
+                                ),
                               ),
-                              Text('INDONESIAN',
-                                  style: TextStyle(
-                                    fontSize: 15,
-                                    color: Colors.black,
-                                  )),
-                            ],
-                          ),
-
-                          Icon(Icons.cancel),
-                        ],
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                     SizedBox(height: 5,),
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(0, 0, 4, 8),
+                      child: Column(
+                        children: <Widget>[
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(0, 4, 0, 0),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: <Widget>[
+                                Row(
+                                  children: <Widget>[
+                                    Icon(
+                                      Icons.volume_up,
+                                      color: Colors.black,
+                                    ),
+                                    SizedBox(
+                                      width: 10,
+                                    ),
+                                    Text('INDONESIAN',
+                                        style: TextStyle(
+                                          fontSize: 15,
+                                          color: Colors.black,
+                                        )),
+                                  ],
+                                ),
+
+                                Icon(Icons.cancel),
+                              ],
+                            ),
+                          ),
+                          SizedBox(height: 5,),
+                          Row(
+                            children: <Widget>[
+                              Padding(
+                                padding: const EdgeInsets.fromLTRB(8.0, 0, 0, 0),
+                                child: Text('good morning',
+                                    style: TextStyle(
+                                        color: Colors.black, fontSize: 30)),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(height: 20,),
                     Row(
                       children: <Widget>[
-                        Padding(
-                          padding: const EdgeInsets.fromLTRB(8.0, 0, 0, 0),
-                          child: Text('good morning',
-                              style: TextStyle(
-                                  color: Colors.black, fontSize: 30)),
-                        ),
+                        Expanded(child: column1),
+                        Expanded(child: column2),
+                        Expanded(child: column3),
+                        Expanded(child: column4),
                       ],
                     ),
+                    SizedBox(height: 20),
                   ],
                 ),
               ),
-              SizedBox(height: 20,),
-              Row(
-                children: <Widget>[
-                  Expanded(child: column1),
-                  Expanded(child: column2),
-                  Expanded(child: column3),
-                  Expanded(child: column4),
-                ],
-              ),
-              SizedBox(height: 20),
+
               Container(
                 color: Colors.blue,
                 child: Padding(
