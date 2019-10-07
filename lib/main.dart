@@ -50,6 +50,7 @@ class _DefinitionCardBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         Text(
@@ -147,11 +148,10 @@ class _TranslatePageState extends State<TranslatePage> {
         title: Text('Google Translate'),
       ),
       body: Container(
-        color: Colors.white,
+        color: Colors.white54,
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
               Padding(
@@ -163,10 +163,6 @@ class _TranslatePageState extends State<TranslatePage> {
                       child: Material(
                         child: DropdownButton<String>(
                           value: dropDownValue1,
-                          icon: Icon(
-                            Icons.arrow_downward,
-                            color: Colors.blue,
-                          ),
                           iconSize: 24,
                           style: TextStyle(color: Colors.blue, fontSize: 20),
                           onChanged: (String newValue) {
@@ -200,7 +196,6 @@ class _TranslatePageState extends State<TranslatePage> {
                       child: Material(
                         child: DropdownButton<String>(
                           value: dropDownValue2,
-                          icon: Icon(Icons.arrow_downward, color: Colors.blue),
                           iconSize: 24,
                           style: TextStyle(color: Colors.blue, fontSize: 20),
                           onChanged: (String newValue) {
@@ -233,22 +228,25 @@ class _TranslatePageState extends State<TranslatePage> {
                     Padding(
                       padding: const EdgeInsets.fromLTRB(0, 4, 0, 0),
                       child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: <Widget>[
-                          Icon(
-                            Icons.volume_up,
-                            color: Colors.black,
-                          ),
-                          SizedBox(
-                            width: 10,
-                          ),
-                          Text('INDONESIAN',
-                              style: TextStyle(
-                                fontSize: 15,
+                          Row(
+                            children: <Widget>[
+                              Icon(
+                                Icons.volume_up,
                                 color: Colors.black,
-                              )),
-                          SizedBox(
-                            width: 185,
+                              ),
+                              SizedBox(
+                                width: 10,
+                              ),
+                              Text('INDONESIAN',
+                                  style: TextStyle(
+                                    fontSize: 15,
+                                    color: Colors.black,
+                                  )),
+                            ],
                           ),
+
                           Icon(Icons.cancel),
                         ],
                       ),
@@ -286,21 +284,23 @@ class _TranslatePageState extends State<TranslatePage> {
                       Padding(
                         padding: const EdgeInsets.all(4.0),
                         child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: <Widget>[
-                            Icon(
-                              Icons.volume_up,
-                              color: Colors.white,
-                            ),
-                            SizedBox(
-                              width: 10,
-                            ),
-                            Text('INDONESIAN',
-                                style: TextStyle(
-                                  fontSize: 15,
+                            Row(
+                              children: <Widget>[
+                                Icon(
+                                  Icons.volume_up,
                                   color: Colors.white,
-                                )),
-                            SizedBox(
-                              width: 135,
+                                ),
+                                SizedBox(
+                                  width: 10,
+                                ),
+                                Text('INDONESIAN',
+                                    style: TextStyle(
+                                      fontSize: 15,
+                                      color: Colors.white,
+                                    )),
+                              ],
                             ),
                             IconButton(
                               icon: Icon(starIconChange,color: Colors.white,),onPressed:
@@ -320,6 +320,7 @@ class _TranslatePageState extends State<TranslatePage> {
                         ],
                       ),
                       Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: <Widget>[
                           SizedBox(width: 250),
                           Icon(
