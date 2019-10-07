@@ -143,12 +143,12 @@ class _TranslatePageState extends State<TranslatePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[100],
       appBar: AppBar(
         leading: Icon(Icons.menu),
         title: Text('Google Translate'),
       ),
       body: Container(
-        color: Colors.white54,
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Column(
